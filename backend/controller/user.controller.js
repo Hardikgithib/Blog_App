@@ -1,15 +1,9 @@
-//const User = require('../model/user.schema')
+
 import {User} from '../model/user.schema.js'
-//const nodemailer = require("nodemailer");
-//const bcrypt = require('bcryptjs');
 import bcrypt from 'bcryptjs'
-//const jwt = require('jsonwebtoken');
+
 import jwt from 'jsonwebtoken'
-//const otpGenerator = require('otp-generator')
 
-//contoller for user related functions
-
-//function for registering existing user
 export const register = async (req, res) => {
     console.log("hello world")
     let { uname, email, password,mobile} = req.body
@@ -29,15 +23,11 @@ export const register = async (req, res) => {
     
         password = await bcrypt.hash(password, salt)  // here we can doing password hashing using bcrypt
      
-        // user = new User({
-        //     uname, email, password, mobile    // saving the newuser in database
-        // })
+        
 
         const data = await User.create({ uname, email, password, mobile });
 
-        //const data = await blogSchema.create({ userId, uname, title, body, tags });
-    
-        //await user.save()
+      
     
         return res.status(201).send({
             'message': 'user registered successfully, please login.',

@@ -9,8 +9,6 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 
 import Accordion from "react-bootstrap/Accordion";
 
-// import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import swal from 'sweetalert';
 export default function AddBlog() {
   const [show3, setShow3] = useState(false);
@@ -244,38 +242,38 @@ else{
               type="radio"
               id="id1"
               name="tags"
-              value="Sports"
+              value="Food"
               onChange={handleChange}
             />{" "}
             &nbsp;
-            <label for="html">Sports</label> &nbsp;
+            <label for="html">Food</label> &nbsp;
             <input
               type="radio"
               id="id2"
               name="tags"
-              value="Entertainment"
+              value="Educations"
               onChange={handleChange}
             />{" "}
             &nbsp;
-            <label for="html">Entertainment</label> &nbsp;
+            <label for="html">Educations</label> &nbsp;
             <input
               type="radio"
               id="id3"
               name="tags"
-              value="Politics"
+              value="Businessmen"
               onChange={handleChange}
             />{" "}
             &nbsp;
-            <label for="html">Politics</label> &nbsp;
+            <label for="html">Businessmen</label> &nbsp;
             <input
               type="radio"
               id="id4"
               name="tags"
-              value="Technology"
+              value="Positions"
               onChange={handleChange}
             />{" "}
             &nbsp;
-            <label for="html">Technology</label> &nbsp;
+            <label for="html">Positions</label> &nbsp;
             <input
               type="radio"
               id="id5"
@@ -333,7 +331,7 @@ else{
                        {el.uname===uname? 
                       <div className="col-6 d-inline-flex justify-content-end">
                         <button 
-                          className="btn btn-sm btn-primary h-3"
+                          className="btn btn-sm btn-primary "
                           onClick={() => handleShow1(el)}
                         >
                           Edit
@@ -410,38 +408,38 @@ else{
               type="radio"
               id="html"
               name="tags"
-              value="Sports"
-              checked={blog.tags == "Sports"}
+              value="Food"
+              checked={blog.tags === "Food"}
               onChange={handleUpdateInput}
             />{" "}
             &nbsp;
-            <label for="html">Sports</label> &nbsp;
+            <label for="html">Food</label> &nbsp;
             <input
               type="radio"
               id="html"
               name="tags"
-              value="Entertainment"
-              checked={blog.tags == "Entertainment"}
+              value="Educations"
+              checked={blog.tags === "Educations"}
               onChange={handleUpdateInput}
             />{" "}
             &nbsp;
-            <label for="html">Entertainment</label> &nbsp;
+            <label for="html">Educations</label> &nbsp;
             <input
               type="radio"
               id="html"
               name="tags"
-              value="Politics"
-              checked={blog.tags == "Politics"}
+              value="Businessmen"
+              checked={blog.tags === "Businessmen"}
               onChange={handleUpdateInput}
             />{" "}
             &nbsp;
-            <label for="html">Politics</label> &nbsp;
+            <label for="html">Businessmen</label> &nbsp;
             <input
               type="radio"
               id="html"
               name="tags"
-              value="Technology"
-              checked={blog.tags == "Technology"}
+              value="Positions"
+              checked={blog.tags === "Positions"}
               onChange={handleUpdateInput}
             />{" "}
             &nbsp;
@@ -451,7 +449,7 @@ else{
               id="html"
               name="tags"
               value="Other"
-              checked={blog.tags == "Other"}
+              checked={blog.tags === "Other"}
               onChange={handleUpdateInput}
             />{" "}
             &nbsp;
