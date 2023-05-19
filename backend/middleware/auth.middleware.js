@@ -14,7 +14,7 @@ const verifyUser = async (req, res, next) => {
         }
 
         try {
-            const decode = jwt.verify(token, "Blogee")
+            const decode = jwt.verify(token, "patient")
 
             const user = await User.findOne({ _id: decode._id })
 

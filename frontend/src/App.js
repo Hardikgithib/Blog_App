@@ -9,7 +9,7 @@ import {
   Navigate,
 } from "react-router-dom";
 // import Dashboard from "./components/Dashboard";
-import AddBlog from "./components/AddBlog";
+import Addpatient from "./components/Addpatient";
 import Header from "./components/Header";
 
 
@@ -26,10 +26,10 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/AddBlog"
+            path="/Addpatient"
             element={
               <ProtectRoute>
-                <AddBlog />
+                <Addpatient />
               </ProtectRoute>
             }
           />
@@ -43,11 +43,11 @@ function App() {
             
           <Register />
         } />
-          {/* <Route path="/addBlog" element={<AddBlog />} /> */}
+     
          
         </Routes>
       </Router>
-      {/* <AddBlog/> */}
+    
     </div>
   );
 }

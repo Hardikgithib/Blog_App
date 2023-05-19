@@ -46,7 +46,7 @@ export default function Login() {
                 const record = localStorage.setItem('token', res.data.data.token) // storing token in local storage
                
                 const user = localStorage.setItem('user', JSON.stringify(res.data.data)) // mapping user details
-                navigate('/AddBlog')
+                navigate('/Addpatient')
                 swal(res.data.message,"success")
 
             } else {

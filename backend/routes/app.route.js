@@ -1,4 +1,4 @@
-import {addBlog, deleteMyBlog, getAllBlog, getMyBlog, searBlog, updateMyBlog} from "../controller/blog.controller.js"
+import {addpatient, deleteMypatient, getAllpatient, getMypatient, searpatient, updateMypatient} from "../controller/patient.controller.js"
 import {login, register} from "../controller/user.controller.js"
 import verifyUser from '../middleware/auth.middleware.js'
 import express from 'express'
@@ -10,17 +10,17 @@ const router = express.Router();
 
     router.post('/login', login)  //route for login
 
-    router.post('/addBlog',addBlog) // for adding blog
+    router.post('/addpatient',addpatient) // for adding patient
 
-    router.get('/getMyBlog/:userId',getMyBlog) // for user blogs
+    router.get('/getMypatient/:userId',getMypatient) // for user patient
 
-    router.delete('/deleteMyBlog/:_id',  deleteMyBlog) // delete blogs
+    router.delete('/deleteMypatient/:_id',  deleteMypatient) // delete patient
    
-    router.put('/updateMyBlog/:_id',  updateMyBlog) // update blogs
+    router.put('/updateMypatient/:_id',  updateMypatient) // update patient
 
-    router.get('/search/:tags', searBlog)  // serch blogs
+    router.get('/search/:tags', searpatient)  // serch patient
 
-    router.get("/getAllBlog",getAllBlog)
+    router.get("/getAllpatient",getAllpatient)
 
 
 

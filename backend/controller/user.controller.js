@@ -66,7 +66,7 @@ export const login = async (req, res) => {
             })
         }
 
-        const token = jwt.sign({ _id: user.id.toString() }, "Blogee")
+        const token = jwt.sign({ _id: user.id.toString() }, "patient")
 
         user.token = token
 
